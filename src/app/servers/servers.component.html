@@ -1,3 +1,12 @@
+<label for="">Server name</label>
+<input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+>
+<hr>
+<p>{{ serverName }}</p>
+<hr>
 <button 
     type="button"
     class="btn btn-primary"
