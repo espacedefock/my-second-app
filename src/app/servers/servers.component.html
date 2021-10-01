@@ -2,8 +2,10 @@
     type="button"
     class="btn btn-primary"
     [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
 > Add server</button>
 <hr>
-<div [innerText]="allowNewServer"></div>
+
+<div [innerText]="serverCreationStatus"></div>
 <hr>
 <app-server></app-server>
