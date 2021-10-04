@@ -5,6 +5,12 @@
     (input)="onUpdateServerName($event)"
 >
 <hr>
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName"
+>
+<hr>
 <p>{{ serverName }}</p>
 <hr>
 <button 
