@@ -1,10 +1,10 @@
 <label for="">Server name</label>
-<input
+<!-- <input
     type="text"
     class="form-control"
     (input)="onUpdateServerName($event)"
 >
-<hr>
+<hr> -->
 <input
     type="text"
     class="form-control"
@@ -13,6 +13,8 @@
 <hr>
 <p>{{ serverName }}</p>
 <hr>
+<div [innerText]="serverCreationStatus"></div>
+<hr>
 <button 
     type="button"
     class="btn btn-primary"
@@ -20,7 +22,18 @@
     (click)="onCreateServer()"
 > Add server</button>
 <hr>
-
-<div [innerText]="serverCreationStatus"></div>
+<label for="">User name</label>
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="userName">
 <hr>
+<button 
+    type="button"
+    class="btn btn-primary"
+    [disabled]="userName === ''"
+    (click)= "userName = ''"
+> Add a name </button>
+<hr>
+<p>Hello {{ userName}} !</p>
 <app-server></app-server>
