@@ -1,0 +1,16 @@
+<hr>
+<button
+    (click)="onToogleDetail()"
+>Display Details</button>
+<p *ngIf="isReadDetail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Similique accusantium eius iure, repellendus magni nam qui 
+    necessitatibus nulla corrupti. Dolore quod nulla vitae?
+    Commodi asperiores voluptatem minus aut quam quaerat!
+</p>
+<hr>
+<div *ngFor="let log of logs"
+    [ngStyle]="{backgroundColor: log >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': log >= 5}"
+>
+    <p>{{ log }}</p>
+</div>
