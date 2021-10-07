@@ -17,6 +17,6 @@ export class AssignmentComponent implements OnInit {
 
   onToogleDetail(){
     this.isReadDetail = !this.isReadDetail;
-    this.logs.push(this.logs.length);
+    this.logs.push(new Date);
   }
 }
